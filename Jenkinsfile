@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Checking and Stopping if there is a website container already running...'
                 sh 'sudo /bin/bash $WORKSPACE/StopAlreadyRunningContainer.sh'
-                sh 'sudo docker run -itd -p 82:80 website'
+                sh 'sudo docker run -itd -p 82:80 website:latest'
                 sh 'sudo docker ps'
             }
         }
