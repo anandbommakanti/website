@@ -10,9 +10,9 @@ pipeline {
             }
             steps {
                 echo 'Building a Docker image based on the configuration in Dockerfile...'
-                echo '---- Contents of Dockerfile -------------------------------------'
+                echo '---- Contents of Dockerfile ------------------------------------'
                 sh 'sudo cat Dockerfile'
-                echo '-----------------------------------------------------------------'
+                echo '----------------------------------------------------------------'
                 sh 'sudo docker build . -t website'
                 sh 'sudo docker images'
             }
