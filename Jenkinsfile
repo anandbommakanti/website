@@ -13,7 +13,7 @@ pipeline {
                 echo '---- Contents of Dockerfile --------------------------------------'
                 sh 'sudo cat Dockerfile'
                 echo '------------------------------------------------------------------'
-                sh 'sudo docker build . -t website'
+                sh 'sudo docker build . -t website:latest'
                 sh 'sudo docker images'
             }
         }
